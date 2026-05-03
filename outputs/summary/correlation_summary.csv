@@ -1,0 +1,4 @@
+relationship,pearson_correlation
+population_2022 vs total_population_affected_m,-0.1742529332627008
+density_per_km2 vs extreme_events,-0.31610073189250526
+total_co2_emissions_mt vs population_2022,-0.4937613410192826

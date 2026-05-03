@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Climate Change and Population Risk</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="intro card">
+        <p class="eyebrow">Interactive Data Storytelling</p>
+        <h1>Climate Change and Population Risk</h1>
+        <p class="intro-text">
+          Explore how population size connects with extreme weather events and people affected across countries.
+          Hover to compare, click to focus, and trace how patterns shift across all linked charts.
+        </p>
+        <div class="intro-meta">
+          <span id="selection-status" class="status-pill">No country selected</span>
+          <button id="reset-selection" class="reset-btn" type="button">Reset selection</button>
+        </div>
+      </header>
+
+      <main class="story-grid">
+        <section class="card section-time-trend">
+          <div class="section-heading">
+            <h2>Global Time Trend</h2>
+            <p>Global population growth over time shows rising baseline exposure to climate risk.</p>
+          </div>
+          <div id="line-chart" class="chart-container chart-medium"></div>
+        </section>
+
+        <section class="card section-main-insight">
+          <div class="section-heading">
+            <h2>Core Relationship</h2>
+            <p>Population (millions) vs people affected (millions), colored by continent.</p>
+          </div>
+          <div id="scatter-chart" class="chart-container chart-large"></div>
+        </section>
+
+        <section class="card section-comparison">
+          <div class="section-heading">
+            <h2>Country Comparison</h2>
+            <p>Linked bar charts update from any chart interaction.</p>
+          </div>
+          <div class="comparison-grid">
+            <div class="chart-card">
+              <h3>Most Populated Countries</h3>
+              <div id="population-bar-chart" class="chart-container"></div>
+            </div>
+            <div class="chart-card">
+              <h3>Extreme Events by Country</h3>
+              <div id="events-bar-chart" class="chart-container"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card section-regional">
+          <div class="section-heading">
+            <h2>Regional Insight</h2>
+            <p>Compare total people affected by region and click a region to filter all country-level charts.</p>
+          </div>
+          <div id="region-chart" class="chart-container chart-medium"></div>
+        </section>
+
+        <section class="card section-insight">
+          <div class="section-heading">
+            <h2>Story Insight</h2>
+            <p>Dynamic narrative generated from the current filtered view.</p>
+          </div>
+          <p id="dynamic-insight" class="dynamic-insight"></p>
+        </section>
+      </main>
+    </div>
+
+    <div id="tooltip" class="tooltip" role="status" aria-live="polite"></div>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

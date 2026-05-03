@@ -1,0 +1,3 @@
+dataset,rows,columns,missing_values,duplicate_rows
+world_population_cleaned,234,19,0,0
+climate_extreme_weather_cleaned,5000,17,0,0
